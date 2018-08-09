@@ -1,0 +1,22 @@
+#display {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  justify-content: center;
+}
+
+.drum-pad {
+  flex-basis: 30%;
+  border: 1px solid red;
+}
+
+kbd {
+  font-size: 2rem;
+}
