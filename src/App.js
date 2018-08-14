@@ -6,13 +6,6 @@ class App extends React.Component {
 	constructor(props){
 		super(props)
 
-		this.state={
-			shoe: 'gold'
-		}
-	}
-
-	hello(){
-		console.log('hi')
 	}
 
   render() {

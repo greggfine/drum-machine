@@ -41,8 +41,9 @@ class DrumPad extends React.Component{
  	 }
 
  	 playSound(e, i){
- 	 	 const innerText = document.getElementById(this.props.sounds[i].id)
- 	 	const sound = document.getElementById(e.key)
+ 	 	console.log(e.key)
+ 	 	const innerText = document.getElementById(this.props.sounds[i].id)
+ 	 	const sound = document.getElementById(e.key.toUpperCase())
  	 	sound.currentTime = 0;
  	 	sound.play()
  	 	sound.onended = () => {
@@ -56,9 +57,10 @@ class DrumPad extends React.Component{
 			return <div className="drum-pad"
 						onClick={(e)=> this.triggerAudio(e, i)}
 						key={ sound.id }
+						id= { sound.id.toUpperCase() }
 					>
 					<kbd id={ sound.id }>{ sound.char }</kbd>
-					<audio id={ sound.char } src={sound.url} />
+					<audio className="clip" id={ sound.char } src={sound.url} />
 					</div>
 			})
 
